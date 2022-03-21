@@ -6,3 +6,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+
+# Default editor
+export VISUAL="nvim"
+export EDITOR="nvim"
+
