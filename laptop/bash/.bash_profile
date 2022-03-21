@@ -11,3 +11,8 @@ fi
 export VISUAL="nvim"
 export EDITOR="nvim"
 
+# Local EasyBuild environment
+export MODULEPATH="${HOME}/easybuild/install/modules${MODULEPATH+":${MODULEPATH}"}"
+export EASYBUILD_PREFIX="${HOME}/easybuild/install"
+export EASYBUILD_GITHUB_USER='lexming'
+export EASYBUILD_GIT_WORKING_DIRS_PATH="${HOME}/src/EB"
