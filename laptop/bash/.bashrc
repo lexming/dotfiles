@@ -25,3 +25,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+
+# Enable Starship prompt
+eval "$(starship init bash)"
+
