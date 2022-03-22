@@ -26,6 +26,11 @@ fi
 
 unset rc
 
+# Aliases
+alias ls='ls --color=auto'
+alias ll='ls -alh'
+alias lt='ls -ltrh'
+
 # Enable Starship prompt
 eval "$(starship init bash)"
 
