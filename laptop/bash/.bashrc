@@ -30,6 +30,7 @@ unset rc
 alias ls='ls --color=auto'
 alias ll='ls -alh'
 alias lt='ls -ltrh'
+alias vi='nvim'
 
 # Enable Starship prompt
 eval "$(starship init bash)"
