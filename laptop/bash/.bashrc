@@ -31,6 +31,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alh'
 alias lt='ls -ltrh'
 alias vi='nvim'
+alias cerberus-vpn='sshuttle @$HOME/.config/sshuttle/cerberus.conf'
 
 # Enable Starship prompt
 eval "$(starship init bash)"
