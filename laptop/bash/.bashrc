@@ -26,13 +26,14 @@ fi
 
 unset rc
 
-# Aliases
-alias ls='ls --color=auto'
-alias ll='ls -alh'
-alias lt='ls -ltrh'
-alias vi='nvim'
+### Aliases
+alias ls="ls --color=auto"
+alias ll="ls -alh"
+alias lt="ls -ltrh"
+alias vi="nvim"
 
-alias cerberus-vpn='sshuttle @$HOME/.config/sshuttle/cerberus.conf'
+# sshuttle
+alias cerberus-vpn="sshuttle @$HOME/.config/sshuttle/cerberus.conf"
 
 # OneDrive
 alias od-sync="onedrive --synchronize"
