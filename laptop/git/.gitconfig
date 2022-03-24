@@ -10,3 +10,5 @@
     user = lexming
 [pull]
     rebase = false
+[init]
+    defaultBranch = main
