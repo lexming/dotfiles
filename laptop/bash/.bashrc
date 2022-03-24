@@ -31,7 +31,15 @@ alias ls='ls --color=auto'
 alias ll='ls -alh'
 alias lt='ls -ltrh'
 alias vi='nvim'
+
 alias cerberus-vpn='sshuttle @$HOME/.config/sshuttle/cerberus.conf'
+
+# OneDrive
+alias od-sync="onedrive --synchronize"
+alias sp-sync="od-sync --confdir='~/.config/sharepoint'"
+# full sync avoiding any removal of remote files
+alias od-safesync="od-sync --download-only && od-sync --upload-only --no-remote-delete"
+alias sp-safesync="sp-sync --download-only && sp-sync --upload-only --no-remote-delete"
 
 # Enable Starship prompt
 eval "$(starship init bash)"
