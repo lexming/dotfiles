@@ -3,7 +3,7 @@ add_newline = true
 
 # Git
 [git_branch]
-symbol = "⎇ "
+symbol = "⌥ "
 
 [git_status]
 format = '([$all_status$ahead_behind]($style) )'
@@ -12,11 +12,11 @@ ahead = "▲"
 behind = "▼"
 diverged = "◆"
 untracked = "◯"
+modified = "⨀"
+renamed = "◎"
 staged = "●"
-deleted = "⊖"
-modified = "⊙"
-renamed = "⊗"
-stashed = "⊕"
+deleted = "◌"
+stashed = "*"
 
 # Disabled modules
 [battery]
