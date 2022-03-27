@@ -11,6 +11,9 @@ fi
 export VISUAL="nvim"
 export EDITOR="nvim"
 
+# Shell history
+export HISTSIZE=10000
+
 # Local EasyBuild environment
 export MODULEPATH="${HOME}/easybuild/install/modules${MODULEPATH+":${MODULEPATH}"}"
 export EASYBUILD_PREFIX="${HOME}/easybuild/install"
