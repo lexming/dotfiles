@@ -1,12 +1,23 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+# Global format
+format = "${custom.history}$all"
+
+# History line number
+[custom.history]
+description = "Show current line number in history"
+command = "echo '\\!'"
+when = "true"
+style = "black"
+format = "[$output| ]($style)"
+
 # Git
 [git_branch]
 symbol = "⌥ "
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
+format = '[$all_status$ahead_behind]($style)'
 style = "bold yellow"
 ahead = "▲"
 behind = "▼"
