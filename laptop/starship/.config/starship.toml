@@ -29,6 +29,10 @@ staged = "●"
 deleted = "◌"
 stashed = "*"
 
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol = "[❯](bold red)"
+
 # Disabled modules
 [battery]
 disabled = true
