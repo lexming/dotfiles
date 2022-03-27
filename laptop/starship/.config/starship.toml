@@ -29,6 +29,11 @@ staged = "●"
 deleted = "◌"
 stashed = "*"
 
+# Languages
+[python]
+style = "bold green"
+
+# Input line
 [character]
 success_symbol = "[❯](bold white)"
 error_symbol = "[❯](bold red)"
