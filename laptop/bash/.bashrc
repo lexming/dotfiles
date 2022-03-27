@@ -15,9 +15,6 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# Custom theme for dircolors
-eval $(dircolors ~/.dir_colors)
-
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
 	for rc in ~/.bashrc.d/*; do
@@ -29,21 +26,8 @@ fi
 
 unset rc
 
-### Aliases
-alias ls="ls --color=auto"
-alias ll="ls -alh"
-alias lt="ls -ltrh"
-alias vi="nvim"
-
-# sshuttle
-alias cerberus-vpn="sshuttle @$HOME/.config/sshuttle/cerberus.conf"
-
-# OneDrive
-alias od-sync="onedrive --synchronize"
-alias sp-sync="od-sync --confdir='~/.config/sharepoint'"
-# full sync avoiding any removal of remote files
-alias od-safesync="od-sync --download-only && od-sync --upload-only --no-remote-delete"
-alias sp-safesync="sp-sync --download-only && sp-sync --upload-only --no-remote-delete"
+# Custom theme for dircolors
+eval $(dircolors ~/.dir_colors)
 
 # Enable Starship prompt
 eval "$(starship init bash)"
