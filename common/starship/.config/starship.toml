@@ -35,10 +35,10 @@ style = "bold green"
 # Input line
 [custom.history]
 description = "Show current line number in history"
-command = "echo '\\!'"
+command = "echo '\\!\\033[6G'"  # print number and move cursor to column 6
 when = "true"
 style = "black"
-format = "[ $output]($style)[╰╴](bold black)"
+format = "[$output]($style)[╰╴](bold black)"
 
 [character]
 success_symbol = "[❯](bold white)"
