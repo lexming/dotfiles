@@ -2,14 +2,16 @@
 add_newline = true
 
 # Global format
-format = """${time}${all}${line_break}\
-${custom.history}${jobs}${status}${shell}${character}"""
+format = """${custom.history}${all}${line_break}\
+${time}${jobs}${status}${shell}${character}"""
 
-# Local time
-[time]
-disabled = false
-format = "[$time│ ](bold black)"
-time_format = "%H:%M"
+# Command history number
+[custom.history]
+description = "Show current command number in history"
+command = "echo '\\!\\033[7G'"  # print number and move cursor to column 7
+when = "true"
+style = "bold black"
+format = "[$output]($style)[╷ ](bold black)"
 
 # Git
 [git_branch]
@@ -33,12 +35,11 @@ stashed = "*"
 style = "bold green"
 
 # Input line
-[custom.history]
-description = "Show current line number in history"
-command = "echo '\\!\\033[6G'"  # print number and move cursor to column 6
-when = "true"
+[time]
+disabled = false
+time_format = "%H:%M"
 style = "black"
-format = "[$output]($style)[╰╴](bold black)"
+format = "[$time]($style)[ ╰╴](bold black)"
 
 [character]
 success_symbol = "[❯](bold white)"
