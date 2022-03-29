@@ -34,6 +34,10 @@ stashed = "*"
 [python]
 style = "bold green"
 
+[rlang]
+detect_files = []
+symbol = "ℝ "
+
 # Input line
 [time]
 disabled = false
