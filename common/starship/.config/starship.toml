@@ -43,7 +43,7 @@ format = "[$time]($style)[ ╰╴](bold black)"
 
 [character]
 success_symbol = "[❯](bold white)"
-error_symbol = "[❯](bold red)"
+error_symbol = "[✖](bold red)"
 
 # Disabled modules
 [battery]
