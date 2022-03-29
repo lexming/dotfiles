@@ -13,6 +13,10 @@ when = "true"
 style = "bold black"
 format = "[$output]($style)[╷ ](bold black)"
 
+# User location
+[hostname]
+format = "[$hostname]($style):"
+
 # Git
 [git_branch]
 symbol = "⌥ "
