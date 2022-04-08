@@ -12,7 +12,7 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 
 # Shell history
-export HISTSIZE=10000
+export HISTSIZE=8000
 
 # Local EasyBuild environment
 export MODULEPATH="${HOME}/easybuild/install/modules${MODULEPATH+":${MODULEPATH}"}"
