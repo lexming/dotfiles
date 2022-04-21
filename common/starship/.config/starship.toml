@@ -42,6 +42,9 @@ style = "bold green"
 detect_files = []
 symbol = "ℝ "
 
+[ruby]
+symbol = "⬘ "
+
 # Input line
 [time]
 disabled = false
