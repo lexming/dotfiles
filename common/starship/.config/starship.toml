@@ -52,6 +52,10 @@ time_format = "%H:%M"
 style = "black"
 format = "[$time]($style)[ ╰╴](bold black)"
 
+[jobs]
+symbol = "⚙"
+number_threshold = 1
+
 [character]
 success_symbol = "[❯](bold white)"
 error_symbol = "[✖](bold red)"
