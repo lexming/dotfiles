@@ -5,11 +5,7 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # Custom aliases and functions
-
 prependpath() {
     # update given environment variable name with given directory
     # path is prepended if it does not exist in environment variable
