@@ -8,7 +8,17 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# Source all rc files
+# Custom aliases and functions
+
+prependpath() {
+    # prepend existing directory to $PATH if it is not in it
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${1}${PATH+:${PATH}}"
+	export PATH
+    fi
+}
+
+# Source rc files
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
         if [ -f "$rc" ]; then
@@ -16,5 +26,4 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
-
 unset rc
