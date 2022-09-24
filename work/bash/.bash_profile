@@ -1,15 +1,15 @@
 # .bash_profile
 
 # User environment
-pathadd() {
+prependpath() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH="${PATH:+"$PATH:"}$1"
+        PATH="${1}${PATH+:${PATH}}"
     fi
 }
 
 # Add user bin folders to PATH
-pathadd "$HOME/bin"
-pathadd "$HOME/.local/bin"
+prependpath "$HOME/bin"
+prependpath "$HOME/.local/bin"
 export PATH
 
 # Default editor
