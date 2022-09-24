@@ -18,9 +18,3 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
-
-# Custom theme for dircolors
-eval "$(dircolors ~/.dir_colors)"
-
-# Enable Starship prompt
-eval "$(starship init bash)"
