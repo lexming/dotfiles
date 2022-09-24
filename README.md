@@ -2,7 +2,11 @@
 
 Collection of dotfiles structured to be managed with
 [GNU Stow](https://www.gnu.org/software/stow/).
- 
+
+```
+$ stow -t "$HOME" bash
+```
+
 ## Starship
 
 Light customization for [GNU Bash](https://www.gnu.org/software/bash/) of the
