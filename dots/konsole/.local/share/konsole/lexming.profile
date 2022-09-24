@@ -23,6 +23,6 @@ ScrollBarPosition=2
 
 [Terminal Features]
 BellMode=3
-BlinkingTextEnabled=false
+BlinkingTextEnabled=true
 VerticalLine=false
 VerticalLineAtChar=80
