@@ -8,9 +8,5 @@ fi
 prependpath "$HOME/bin"
 prependpath "$HOME/.local/bin"
 
-# Default editor
-export VISUAL="nvim"
-export EDITOR="nvim"
-
 # Shell history
 export HISTSIZE=8000
