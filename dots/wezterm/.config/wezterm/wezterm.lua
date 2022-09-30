@@ -14,8 +14,7 @@ return {
     -- font settings
     font = wezterm.font("JetBrains Mono"),
     custom_block_glyphs = false,
-    -- non-Gogh color schemes
-    -- Whimsy, tokyonight, lovelace, Firewatch, Subliminal, nord
+    -- Whimsy, tokyonight, lovelace, Firewatch, Ayu Mirage, Subliminal, nord
     color_scheme = "Subliminal",
     -- tab bar
     use_fancy_tab_bar = false,
