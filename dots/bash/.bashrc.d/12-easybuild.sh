@@ -17,30 +17,31 @@ prependpath "${EASYBUILD_PREFIX}/${mod_path}" MODULEPATH
 # Remove locally installed packages with EB
 verbose_rmdir () {
     if [ -d "$1" ]; then
-        rm -rf "$1"
-        if [ $? -eq 0 ]; then echo 'Done'; fi
-    else echo 'Not found'; fi
+        rm -rf "$1" && echo 'Done'
+    else
+        echo 'Not found'
+    fi
 }
 ebrm () {
-    EB_PKG="$1"
+    local pkg="$1"
 
     # Local repository
-    EB_ARCH=${2:-skylake}
-    EB_PREFIX="${EASYBUILD_PREFIX}/${EB_ARCH}"
+    local arch=${2:-skylake}
+    local prefix="${EASYBUILD_PREFIX}"
 
-    EB_LOC="${EB_PREFIX}/software/${EB_PKG}"
-    echo -n "Removing installed software ${EB_PKG}... "
-    verbose_rmdir $EB_LOC
+    local installdir="${prefix}/software/${pkg}"
+    echo -n "Removing installed software ${pkg}... "
+    verbose_rmdir $installdir
 
-    EB_LOC="${EB_PREFIX}/modules/"
-    find $EB_LOC -type d -name "${EB_PKG}" | while read moddir; do
-    echo -n "Removing modules of ${EB_PKG} in $(basename $(dirname ${moddir}))... "
-        verbose_rmdir "${moddir}"
+    local moddir="${prefix}/modules/"
+    find $moddir -type d -name "${pkg}" | while read pkgmoddir; do
+        echo -n "Removing modules of ${pkg} in $(basename $(dirname ${pkgmoddir}))... "
+        verbose_rmdir "${pkgmoddir}"
     done
 
-    EB_LOC="${EB_PREFIX}/sources/$(echo ${EB_PKG:0:1} | tr '[:upper:]' '[:lower:]')/${EB_PKG}"
-    echo -n "Removing downloaded sources of ${EB_PKG}... "
-    verbose_rmdir $EB_LOC
+    local sourcedir="${prefix}/sources/$(echo ${pkg:0:1} | tr '[:upper:]' '[:lower:]')/${pkg}"
+    echo -n "Removing downloaded sources of ${pkg}... "
+    verbose_rmdir $sourcedir
 }
 
 # Print extensions that only exist in one of the given modules
