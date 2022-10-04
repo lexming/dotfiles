@@ -1,18 +1,23 @@
+# EasyBuild environment
+eb_prefix="${HOME}/easybuild/install"
+[ -d "$eb_prefix" ] || return
+
+# VSC clusters have installations for multiple architectures
+[ ! -z "$VSC_ARCH_LOCAL" ] && eb_prefix="${eb_prefix}/${VSC_ARCH_LOCAL}"
+export EASYBUILD_PREFIX="$eb_prefix"
+
+mod_path="modules/all"
+prependpath "${EASYBUILD_PREFIX}/${mod_path}" MODULEPATH
+
+# GitHub integration
+export EASYBUILD_GITHUB_USER="lexming"
+export EASYBUILD_GIT_WORKING_DIRS_PATH="${HOME}/src/EB"
+
+# Aliases
 alias ebt='eb --rebuild --robot="$HOME/easybuild/easyconfigs" --trace'
 alias eb1='eb --rebuild --robot="$HOME/easybuild/easyconfigs" --trace --parallel=1'
 alias ebi='eb --force --inject-checksums=sha256'
 alias ebact='source ~/.local/venv/eb/bin/activate'
-
-# EasyBuild environment
-export EASYBUILD_GITHUB_USER="lexming"
-export EASYBUILD_GIT_WORKING_DIRS_PATH="${HOME}/src/EB"
-
-eb_prefix="${HOME}/easybuild/install"
-mod_path="modules/all"
-# VSC clusters have installations for multiple architectures
-[ ! -z "$VSC_ARCH_LOCAL" ] && eb_prefix="${eb_prefix}/${VSC_ARCH_LOCAL}"
-export EASYBUILD_PREFIX="$eb_prefix"
-prependpath "${EASYBUILD_PREFIX}/${mod_path}" MODULEPATH
 
 # Remove locally installed packages with EB
 verbose_rmdir () {
