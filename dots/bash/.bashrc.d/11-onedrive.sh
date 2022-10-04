@@ -1,6 +1,8 @@
-# OneDrive
-alias od-sync="onedrive --synchronize"
-alias sp-sync="od-sync --confdir=~/.config/sharepoint"
-# full sync avoiding any removal of remote files
-alias od-safesync="od-sync --download-only && od-sync --upload-only --no-remote-delete"
-alias sp-safesync="sp-sync --download-only && sp-sync --upload-only --no-remote-delete"
+if hash onedrive 2>/dev/null; then
+    # OneDrive
+    alias od-sync="onedrive --synchronize"
+    alias sp-sync="od-sync --confdir=~/.config/sharepoint"
+    # full sync avoiding any removal of remote files
+    alias od-safesync="od-sync --download-only && od-sync --upload-only --no-remote-delete"
+    alias sp-safesync="sp-sync --download-only && sp-sync --upload-only --no-remote-delete"
+fi
