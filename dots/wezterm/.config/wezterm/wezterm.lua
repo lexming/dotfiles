@@ -15,7 +15,7 @@ return {
     font = wezterm.font("JetBrains Mono"),
     custom_block_glyphs = false,
     -- Whimsy, tokyonight, lovelace, Firewatch, Ayu Mirage, Subliminal, nord
-    color_scheme = "Subliminal",
+    color_scheme = "nightfox",
     -- tab bar
     use_fancy_tab_bar = false,
     colors = {
