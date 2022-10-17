@@ -4,6 +4,8 @@ alias lt="ls -ltrh"
 
 # TAB expand environement variables that refer to dirs
 shopt -s direxpand
+# TAB using built-in completion for cd
+complete -r cd
 
 # Custom theme for dircolors
 eval "$(dircolors ~/.dir_colors)"
