@@ -2,8 +2,8 @@ alias ls="ls --color=auto"
 alias ll="ls -alh"
 alias lt="ls -ltrh"
 
-# TAB expand environement variables that refer to dirs
-shopt -s direxpand
+# remove default bash completion
+complete -r -D
 # TAB using built-in completion for cd
 complete -r cd
 
