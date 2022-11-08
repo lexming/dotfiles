@@ -15,7 +15,7 @@ require("indent_blankline").setup {
 }
 
 -- Tree-Sitter
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup {
     -- A list of parser names, or "all"
     ensure_installed = {
         -- generic
@@ -59,8 +59,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- Statusline
-
-require('lualine').setup {
+require("lualine").setup {
     options = {
         icons_enabled = true,
         theme = 'auto',
@@ -90,5 +89,4 @@ require('lualine').setup {
 }
 
 -- Cmdline
-
 opt.showmode = false
