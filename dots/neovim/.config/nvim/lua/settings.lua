@@ -10,3 +10,12 @@ opt.shiftwidth = 4
 opt.softtabstop = 0
 opt.expandtab = true
 
+-- Filetypes
+require("filetype").setup {
+    overrides = {
+        extensions = {
+            -- Set the filetype of *.eb files to Python
+            eb = "python",
+        },
+    },
+}
