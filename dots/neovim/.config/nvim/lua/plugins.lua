@@ -20,8 +20,9 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
     -- [[ git ]]
+    use "rhysd/git-messenger.vim"
     use {
-        'lewis6991/gitsigns.nvim',
+        "lewis6991/gitsigns.nvim",
         tag = 'release',
     }
 end)
