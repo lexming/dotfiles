@@ -58,14 +58,13 @@ require("lspconfig").bashls.setup {
 require("lspconfig").pylsp.setup {
     on_attach = on_attach,
     settings = {
-        formatCommand = {"black"},
         pylsp = {
             plugins = {
                 black = {
-                    enabled = false,
+                    enabled = true,
                     line_length = 120,
                 },
-                isort = { enabled = true },
+                isort = { enabled = false },
                 pycodestyle = { enabled = false },
                 pylint = {
                     enabled = true,
