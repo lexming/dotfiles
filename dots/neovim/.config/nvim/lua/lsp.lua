@@ -26,10 +26,11 @@ require("lspconfig").pylsp.setup {
     },
 }
 
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
+-- Mappings
 local opts = { noremap=true, silent=true }
--- Show diagnostics in a floating window
+keym.set('n', '<leader>L', ':LspStart', opts)
+keym.set('n', '<leader>l', ':LspStop', opts)
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 keym.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 keym.set('n', '[d', vim.diagnostic.goto_prev, opts)
 keym.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -38,10 +39,10 @@ keym.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-    -- Enable completion triggered by <c-x><c-o>
+    -- Enable completion triggered by i_<c-x><c-o> 
     api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   
-    -- Mappings.
+    -- Mappings
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
     -- Displays hover information about the symbol under the cursor
