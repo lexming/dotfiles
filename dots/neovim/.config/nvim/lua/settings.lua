@@ -19,3 +19,6 @@ require("filetype").setup {
         },
     },
 }
+
+-- git
+require('gitsigns').setup()
