@@ -11,6 +11,7 @@ require("lspconfig").pylsp.setup {
             plugins = {
                 black = { enabled = true },
                 isort = { enabled = true },
+                pycodestyle = { enabled = false },
                 pylint = {
                     enabled = true,
                     args = {"--max-line-length=120"},
