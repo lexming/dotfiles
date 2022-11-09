@@ -29,10 +29,10 @@ require("lspconfig").pylsp.setup {
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
 -- Show diagnostics in a floating window
-keym.set('n', 'ge', vim.diagnostic.open_float, opts)
+keym.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 keym.set('n', '[d', vim.diagnostic.goto_prev, opts)
 keym.set('n', ']d', vim.diagnostic.goto_next, opts)
-keym.set('n', 'gq', vim.diagnostic.setloclist, opts)
+keym.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -56,13 +56,13 @@ local on_attach = function(client, bufnr)
     -- Lists all the references
     keym.set('n', 'gr', vim.lsp.buf.references, bufopts)
     -- Displays a function's signature information
-    keym.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+    keym.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts)
     -- Renames all references to the symbol under the cursor
-    keym.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+    keym.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
     -- Selects a code action available at the current cursor position
-    keym.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    keym.set('n', '<leader>a', vim.lsp.buf.code_action, bufopts)
     -- Format code at current cursor position
-    keym.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    keym.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 -- Fancy diagnostics signs on the line number column
