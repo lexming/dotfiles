@@ -68,7 +68,10 @@ require("lspconfig").pylsp.setup {
                 pycodestyle = { enabled = false },
                 pylint = {
                     enabled = true,
-                    args = {"--max-line-length=120"},
+                    args = {
+                        "--max-line-length=120",
+                        "--disable=E0401",
+                    },
                 },
                 pyls_flake8 = {
                     enabled = false,
