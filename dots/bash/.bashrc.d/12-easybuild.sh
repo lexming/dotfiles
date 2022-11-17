@@ -28,6 +28,8 @@ verbose_rmdir () {
     fi
 }
 ebrm () {
+    [ -z "$1" ] && { echo "Missing package name"; return 1; }
+
     local pkg="$1"
 
     # Local repository
