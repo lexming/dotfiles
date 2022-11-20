@@ -5,7 +5,7 @@ local opt = vim.opt
 opt.termguicolors = true
 
 -- Color scheme
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme duskfox")
 
 -- Indent indicator
 require("indent_blankline").setup {
