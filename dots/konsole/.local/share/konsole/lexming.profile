@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=nord
+ColorScheme=Catppuccin-Mocha
 Font=JetBrains Mono,11,-1,5,25,0,0,0,0,0,Light
 LineSpacing=0
 UseFontLineChararacters=true
