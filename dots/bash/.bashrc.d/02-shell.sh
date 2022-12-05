@@ -3,7 +3,9 @@ alias ll="ls -alh"
 alias lt="ls -ltrh"
 
 # most recent file in cwd
-alias rf="find . -type f -printf '%T@ %p\n' | sort -nr | cut -c23- | head -n 1"
+most_recent_item="sort -nr | cut -c23- | head -n 1"
+alias rf="find . -type f -printf '%T@ %p\n' | $most_recent_item"
+alias rf1="find . -maxdepth 1 -type f -printf '%T@ %p\n' | $most_recent_item"
 
 # remove default bash completion
 complete -r -D
