@@ -2,6 +2,9 @@ alias ls="ls --color=auto"
 alias ll="ls -alh"
 alias lt="ls -ltrh"
 
+# most recent file in cwd
+alias rf="find . -type f -printf '%T@ %p\n' | sort -nr | cut -c23- | head -n 1"
+
 # remove default bash completion
 complete -r -D
 # TAB using built-in completion for cd
