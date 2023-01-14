@@ -2,7 +2,9 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+    source /etc/bashrc
+elif [ -f /etc/bash/bashrc ]; then
+    source /etc/bash/bashrc
 fi
 
 # Custom aliases and functions
