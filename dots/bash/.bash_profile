@@ -4,7 +4,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # Add user bin folders to PATH
-prependpath "$HOME/bin"
 prependpath "$HOME/.local/bin"
 
 # Shell history
