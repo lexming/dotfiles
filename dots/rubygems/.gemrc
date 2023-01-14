@@ -1,0 +1,5 @@
+gemhome: /home/lexming/.local/gems/ruby/2.7.0/gems
+gem: --bindir /home/lexming/.local/bin --no-document
+install: --no-wrappers
+uninstall:
+update: --no-wrappers
