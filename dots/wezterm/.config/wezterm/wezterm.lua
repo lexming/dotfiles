@@ -40,5 +40,7 @@ return {
     keys = {
         { key = '\'', mods = 'CTRL', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
         { key = '/', mods = 'CTRL', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+        { key = 'PageUp', mods = 'SHIFT', action = wezterm.action.ScrollByPage(-0.5) },
+        { key = 'PageDown', mods = 'SHIFT', action = wezterm.action.ScrollByPage(0.5) },
     },
 }
