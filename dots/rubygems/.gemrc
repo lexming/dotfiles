@@ -1,4 +1,4 @@
-gemhome: /home/lexming/.local/gems/ruby/2.7.0/gems
+gemhome: /home/lexming/.local/gems/ruby/3.0.0/gems
 gem: --bindir /home/lexming/.local/bin --no-document
 install: --no-wrappers
 uninstall:
