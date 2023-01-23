@@ -5,6 +5,8 @@
     ca = commit --amend
     cf = commit --amend --no-edit
     ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    rg = log -p -G
+    rga = log --branches --all -p -G
 [user]
     name = Alex Domingo
     email = alex.domingo.toro@vub.be
