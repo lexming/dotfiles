@@ -22,5 +22,7 @@ if hash fzf 2>/dev/null; then
 fi
 
 # Enable Starship prompt
-starship_bin="$(env PATH=$HOME/bin:$PATH which starship)"
-eval "$($starship_bin init bash)"
+if PATH=$HOME/bin:$PATH hash starship 2>/dev/null; then
+    starship_bin="$(env PATH=$HOME/bin:$PATH which starship)"
+    eval "$($starship_bin init bash)"
+fi
