@@ -17,6 +17,11 @@ Mask=0
 OpaqueTitleBar=true
 PreventApplyOpacityToHeader=true
 
+[Style]
+MenuOpacity=80
+ScrollBarAddLineButtons=0
+ScrollBarSubLineButtons=0
+
 [Windeco]
 AnimationsSpeedRelativeSystem=6
 CornerRadius=6
