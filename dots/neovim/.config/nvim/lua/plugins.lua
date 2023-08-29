@@ -2,6 +2,10 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- [[ General ]]
     use "nathom/filetype.nvim"
+    use {
+        'vladdoster/remember.nvim',
+        config = [[ require('remember') ]],
+    }
     -- [[ Theming ]]
     use "lukas-reineke/indent-blankline.nvim"
     use "EdenEast/nightfox.nvim"
