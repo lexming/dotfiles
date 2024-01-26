@@ -8,11 +8,7 @@ opt.termguicolors = true
 vim.cmd("colorscheme duskfox")
 
 -- Indent indicator
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = false,
-}
+require("ibl").setup()
 
 -- Tree-Sitter
 require("nvim-treesitter.configs").setup {
