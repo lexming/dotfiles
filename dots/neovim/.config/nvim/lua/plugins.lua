@@ -22,8 +22,5 @@ return require('packer').startup(function(use)
     }
     -- [[ git ]]
     use "rhysd/git-messenger.vim"
-    use {
-        "lewis6991/gitsigns.nvim",
-        tag = 'release',
-    }
+    use "lewis6991/gitsigns.nvim"
 end)
