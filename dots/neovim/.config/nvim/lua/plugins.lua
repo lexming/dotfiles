@@ -13,10 +13,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    }
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     -- [[ LSP ]]
     use {
         "williamboman/mason.nvim",
