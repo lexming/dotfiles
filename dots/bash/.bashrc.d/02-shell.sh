@@ -23,6 +23,7 @@ fi
 
 # Enable Starship prompt
 if PATH=$HOME/.local/bin:$PATH hash starship 2>/dev/null; then
+    export STARSHIP_LOG="error"
     starship_bin="$(env PATH=$HOME/.local/bin:$PATH which starship)"
     eval "$($starship_bin init bash)"
 fi
