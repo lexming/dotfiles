@@ -1,6 +1,13 @@
-alias ls="ls --color=auto"
-alias ll="ls -alh"
-alias lt="ls -ltrh"
+if hash eza 2>/dev/null; then
+    alias ls="eza -F --group-directories-first --icons always"
+    alias ll="ls -l -g -o --no-permissions --time-style iso"
+    alias lt="ll --sold"
+    alias la="ll --all --all"
+else
+    alias ls="ls --color=auto"
+    alias ll="ls -alh"
+    alias lt="ls -ltrh"
+fi
 
 # most recent file in cwd
 most_recent_item="sort -nr | cut -c23- | head -n 1"
