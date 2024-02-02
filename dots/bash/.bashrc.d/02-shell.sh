@@ -13,16 +13,19 @@ complete -r cd
 # Custom theme for dircolors
 eval "$(dircolors ~/.dir_colors)"
 
+# Add use bin folder to PATH (temporarily)
+PATH=$HOME/.local/bin:$PATH
+
 # Fuzzy finder
 if hash fzf 2>/dev/null; then
-    source /usr/share/fzf/shell/key-bindings.bash
+    source $HOME/.local/share/fzf/key-bindings.bash
     if hash fd 2>/dev/null; then
          export FZF_DEFAULT_COMMAND="fd --type f"
     fi
 fi
 
 # Enable Starship prompt
-if PATH=$HOME/.local/bin:$PATH hash starship 2>/dev/null; then
+if hash starship 2>/dev/null; then
     export STARSHIP_LOG="error"
     starship_bin="$(env PATH=$HOME/.local/bin:$PATH which starship)"
     eval "$($starship_bin init bash)"
