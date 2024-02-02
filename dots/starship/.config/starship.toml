@@ -25,6 +25,7 @@ format = "[$hostname]($style):"
 symbol = "⌥ "
 
 [git_status]
+ignore_submodules = true
 format = '[$all_status$ahead_behind ]($style)'
 style = "bold yellow"
 ahead = "▲"
