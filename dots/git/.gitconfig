@@ -23,3 +23,5 @@
     clean = git-lfs clean -- %f
 [credential]
     helper = cache
+[maintenance]
+    repo = ~/src/easybuild-easyconfigs
