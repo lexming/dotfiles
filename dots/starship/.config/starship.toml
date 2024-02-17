@@ -6,7 +6,7 @@ ${time}${jobs}${status}${shell}${character}"""
 add_newline = true
 
 # Increase execution timeout (git can take some time to finish) 
-command_timeout = 1000
+command_timeout = 300
 
 # Command history number
 [custom.history]
