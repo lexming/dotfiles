@@ -1,5 +1,5 @@
 [alias]
-    s = status
+    s = status --untracked-files=normal
     co = checkout
     cm = commit -m
     ca = commit --amend
