@@ -13,7 +13,7 @@ fi
 most_recent_item="sort -nr | cut -c23- | head -n 1"
 alias rf="find . -type f -printf '%T@ %p\n' | $most_recent_item"
 alias rf1="find . -maxdepth 1 -type f -printf '%T@ %p\n' | $most_recent_item"
-alias tfr="tail -f $(rf1)"
+alias tfr='tail -f $(rf1)'
 
 # automatically expand variables on tab completion
 shopt -s direxpand
