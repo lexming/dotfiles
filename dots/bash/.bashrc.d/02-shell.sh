@@ -1,3 +1,8 @@
+
+# Temporarirly add use bin folder to PATH
+PATH=$HOME/.local/bin:$PATH
+
+# ls aliases with and without eza
 if hash eza 2>/dev/null; then
     alias ls="eza -F --group-directories-first --icons always"
     alias ll="ls -l -g -o --no-permissions --time-style iso"
@@ -22,9 +27,6 @@ shopt -s cdable_vars
 
 # Custom theme for dircolors
 eval "$(dircolors ~/.dir_colors)"
-
-# Add use bin folder to PATH (temporarily)
-PATH=$HOME/.local/bin:$PATH
 
 # Fuzzy finder
 if hash fzf 2>/dev/null; then
