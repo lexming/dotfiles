@@ -17,8 +17,8 @@ prependpath() {
     local envar_path="${!envar_name}"
     local new_path="$(realpath $1)"
     if [ -d "$new_path" ] && [[ ":${envar_path}:" != *":$new_path:"* ]]; then
-	envar_path="${1}${envar_path+:${envar_path}}"
-	export $envar_name="$envar_path"
+        envar_path="${1}${envar_path+:${envar_path}}"
+        export $envar_name="$envar_path"
     fi
 }
 

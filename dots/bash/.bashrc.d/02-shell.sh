@@ -1,6 +1,5 @@
-
-# Temporarirly add use bin folder to PATH
-PATH=$HOME/.local/bin:$PATH
+# Early addition of user bin folder to PATH
+prependpath "$HOME/.local/bin"
 
 # ls aliases with and without eza
 if hash eza 2>/dev/null; then
@@ -39,6 +38,6 @@ fi
 # Enable Starship prompt
 if hash starship 2>/dev/null; then
     export STARSHIP_LOG="error"
-    starship_bin="$(env PATH=$HOME/.local/bin:$PATH which starship)"
+    starship_bin="$(which starship)"
     eval "$($starship_bin init bash)"
 fi
