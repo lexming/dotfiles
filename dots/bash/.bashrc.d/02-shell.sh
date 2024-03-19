@@ -19,6 +19,9 @@ alias rf="find . -type f -printf '%T@ %p\n' | $most_recent_item"
 alias rf1="find . -maxdepth 1 -type f -printf '%T@ %p\n' | $most_recent_item"
 alias tfr='tail -f $(rf1)'
 
+# sorted du on current folder
+alias du1h="du -h --max-depth=1 | sort -h"
+
 # automatically expand variables on tab completion
 shopt -s direxpand
 # argument to cd that is not a directory is assumed to be a variable
