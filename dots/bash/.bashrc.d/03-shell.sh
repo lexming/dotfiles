@@ -1,6 +1,3 @@
-# Early addition of user bin folder to PATH
-prependpath "$HOME/.local/bin"
-
 # ls aliases with and without eza
 if hash eza 2>/dev/null; then
     alias ls="eza -F --group-directories-first --icons always"
