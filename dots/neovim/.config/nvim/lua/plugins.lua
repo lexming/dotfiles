@@ -22,4 +22,11 @@ return require('packer').startup(function(use)
     -- [[ git ]]
     use "rhysd/git-messenger.vim"
     use "lewis6991/gitsigns.nvim"
+    use {
+        "rawnly/gist.nvim",
+        config = function() require("gist").setup() end,
+        -- `GistsList` opens the selected gif in a terminal buffer,
+        -- this plugin uses neovim remote rpc functionality to open the gist in an actual buffer and not have buffer inception
+        requires = { "samjwill/nvim-unception", setup = function() vim.g.unception_block_while_host_edits = true end }
+    }
 end)
