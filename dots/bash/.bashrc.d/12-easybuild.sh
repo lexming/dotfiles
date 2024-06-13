@@ -19,6 +19,8 @@ alias eb1='eb --rebuild --robot="$HOME/easybuild/easyconfigs" --trace --parallel
 alias ebi='eb --force --inject-checksums=sha256'
 alias ebact='source ~/.local/venv/eb/bin/activate'
 
+alias pip-push='python -m pip install --upgrade --no-deps .'
+
 # Remove locally installed packages with EB
 verbose_rmdir () {
     if [ -d "$1" ]; then
