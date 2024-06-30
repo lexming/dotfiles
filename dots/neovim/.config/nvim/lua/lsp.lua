@@ -70,7 +70,7 @@ require("lspconfig").pylsp.setup {
                     enabled = true,
                     args = {
                         "--max-line-length=120",
-                        "--disable=E0401",
+                        "--disable=E0401,W1202,W1203,C0209",
                     },
                 },
                 pyls_flake8 = {
