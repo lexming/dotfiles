@@ -36,7 +36,7 @@ ebrm () {
 
     # Local repository
     local arch=${2:-skylake}
-    local prefix="${EASYBUILD_PREFIX}"
+    local prefix="$(dirname $EASYBUILD_PREFIX)/$arch"
 
     local installdir="${prefix}/software/${pkg}"
     echo -n "Removing installed software ${pkg}... "
