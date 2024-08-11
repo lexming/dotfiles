@@ -12,9 +12,11 @@ command_timeout = 300
 [custom.history]
 description = "Show current command number in history"
 command = "echo '\\!\\033[7G'"  # print number and move cursor to column 7
+unsafe_no_escape = true
 when = "true"
+symbol = "╷ "
 style = "bold black"
-format = "[$output]($style)[╷ ](bold black)"
+format = "[$output]($style)[$symbol]($style)"
 
 # User location
 [hostname]
