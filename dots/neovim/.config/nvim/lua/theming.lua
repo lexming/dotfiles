@@ -7,15 +7,12 @@ opt.termguicolors = true
 -- Color scheme
 vim.cmd("colorscheme duskfox")
 
--- Indent indicator
-require("ibl").setup()
-
 -- Render special whitespace characters
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+opt.list = true
+opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- git
-require('gitsigns').setup()
+-- Cmdline
+opt.showmode = false
 
 -- Statusline
 require("lualine").setup {
@@ -46,6 +43,3 @@ require("lualine").setup {
     inactive_winbar = {},
     extensions = {}
 }
-
--- Cmdline
-opt.showmode = false
