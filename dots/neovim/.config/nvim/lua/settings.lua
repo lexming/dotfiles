@@ -1,4 +1,5 @@
 local opt = vim.opt
+local keym = vim.keymap
 
 -- Show absolute line number in cursor and relative numbers around it
 opt.number = true
@@ -11,10 +12,13 @@ opt.softtabstop = 0
 opt.expandtab = true
 
 -- Keep undo history
-vim.opt.undofile = true
+opt.undofile = true
+
+-- Keep a buffer of eight lines on scrolling
+opt.scrolloff = 8
 
 -- Clear highlights on search when pressing <Esc> in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+keym.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+keym.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
