@@ -10,5 +10,11 @@ opt.shiftwidth = 4
 opt.softtabstop = 0
 opt.expandtab = true
 
--- git
-require('gitsigns').setup()
+-- Keep undo history
+vim.opt.undofile = true
+
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })

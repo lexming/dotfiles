@@ -1,5 +1,6 @@
-require("plugins")
+require("lazy-plugin-manager")
 require("settings")
 require("spell")
-require("lsp")
 require("theming")
+require("treesitter")
+require("lsp")
