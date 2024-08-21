@@ -119,8 +119,11 @@ require('lspconfig').ruff.setup({
                     "B",    -- flake8 - bugbear
                     "SIM",  -- flake8 - simplify
                     "Q",    -- flake8 - quotes
+                    "PL",   -- pylint
                 },
-                ignore = {},
+                ignore = {
+                    "PLR",  -- pylint - refactor
+                },
             },
         }
     }
