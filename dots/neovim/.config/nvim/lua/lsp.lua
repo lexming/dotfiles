@@ -117,8 +117,13 @@ require('lspconfig').ruff.setup({
                     "N",    -- pep8 naming
                     "UP",   -- pyupgrade
                     "B",    -- flake8 - bugbear
+                    "A",    -- flake8 - builtins
+                    "C4",   -- flake8 - comprehensions
+                    "T20",  -- flake8 - prints
                     "SIM",  -- flake8 - simplify
                     "Q",    -- flake8 - quotes
+                    "RET",  -- flake8 - returns
+                    "ARG",  -- flake8 - unused args
                     "PL",   -- pylint
                 },
                 ignore = {
