@@ -7,6 +7,23 @@ Collection of dotfiles structured to be managed with
 $ stow -t "$HOME" bash
 ```
 
+## Wezterm
+
+🏠 https://wezfurlong.org/wezterm/  
+📌 [dotfiles](dots/wezterm/.config/wezterm)
+
+My goal with the terminal is to detach myself from the mouse. This basically
+translates to be able fully navigate through tabs and panels and select any
+text in the terminal exclusively with the keyboard. Wezterm provides the
+following features specifically for this purpose:
+* [Copy mode](https://wezfurlong.org/wezterm/copymode.html)
+* [Scrollback search](https://wezfurlong.org/wezterm/scrollback.html#searching-the-scrollback)
+* [Multiplexing](https://wezfurlong.org/wezterm/multiplexing.html)
+
+Almost default configuration with a few adjustments on color theme and
+key-bindings.
+![Wezterm screenshot](/assets/wezterm_window.png)
+
 ## GNU Bash
 
 🏠 https://www.gnu.org/software/bash/  
