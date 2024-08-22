@@ -8,7 +8,7 @@ require("nvim-treesitter.configs").setup {
         -- build tools
         "cmake", "make",
         -- web development
-        "css", "html", "php", "javascript", 
+        "css", "html", "php", "javascript",
         -- documentation
         "markdown", "rst",
         -- misc
