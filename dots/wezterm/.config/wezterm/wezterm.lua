@@ -42,8 +42,17 @@ config.colors = {
 }
 -- key-bindigs
 config.keys = {
-    { key = '\'', mods = 'CTRL', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = '/', mods = 'CTRL', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+    -- panel navigation and resizing
+    { key = '-', mods = 'SUPER', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+    { key = '=', mods = 'SUPER', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = '/', mods = 'SUPER', action = wezterm.action.CloseCurrentPane{ confirm = false } },
+    { key = '[', mods = 'SUPER', action = wezterm.action.ActivatePaneDirection('Prev') },
+    { key = ']', mods = 'SUPER', action = wezterm.action.ActivatePaneDirection('Next') },
+    { key = '[', mods = 'SUPER|CTRL', action = act.AdjustPaneSize{ 'Left', 1 } },
+    { key = ']', mods = 'SUPER|CTRL', action = act.AdjustPaneSize{ 'Right', 1 } },
+    { key = '[', mods = 'SUPER|ALT|CTRL', action = act.AdjustPaneSize{ 'Up', 1 } },
+    { key = ']', mods = 'SUPER|ALT|CTRL', action = act.AdjustPaneSize{ 'Down', 1 } },
+    -- scroll behaviour
     { key = 'PageUp', mods = 'SHIFT', action = wezterm.action.ScrollByPage(-0.5) },
     { key = 'PageDown', mods = 'SHIFT', action = wezterm.action.ScrollByPage(0.5) },
 }
