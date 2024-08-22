@@ -94,6 +94,7 @@ for type, icon in pairs(signs) do
 end
 
 -- Language server setup
+-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 require("mason").setup()
 require("mason-lspconfig").setup()
 
@@ -103,7 +104,10 @@ require("lspconfig").bashls.setup({})
 --[[ Settings for Lua LSP ]]
 require("lspconfig").lua_ls.setup({})
 
---[[ Settings for Ruff LSP ]]
+--[[ Settings for Markdown LSP ]]
+require("lspconfig").marksman.setup({})
+
+--[[ Settings for Python LSP ]]
 require('lspconfig').ruff.setup({
     init_options = {
         settings = {
