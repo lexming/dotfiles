@@ -65,3 +65,12 @@ avoiding bloating it up to a fully fledged IDE.
 * Indentation guides: [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * Better statusline: [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 * Quick motions: [ggandor/leap.nvim](https://github.com/ggandor/leap.nvim)
+
+## CLI Tools
+
+Additional tools for the terminal:
+
+* File listing: [eza](https://github.com/eza-community/eza)
+* File search: [fd](https://github.com/sharkdp/fd)
+* Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
+
