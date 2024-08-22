@@ -39,6 +39,15 @@ config.colors = {
         new_tab = { bg_color = "#232136", fg_color = "#5c7d9a" },
         new_tab_hover = { bg_color = "#232136", fg_color = '#ff87e5', italic = false },
     },
+    -- Colors for copy_mode
+    -- 1. copy_mode_active_highlight_* if additional text was selected using the mouse
+    -- 2. selection_* otherwise
+    selection_bg = '#393552',  -- Black
+    selection_fg = '#eb6f92',  -- Maroon
+    copy_mode_active_highlight_bg = { AnsiColor = 'Black' },
+    copy_mode_active_highlight_fg = { AnsiColor = 'Red' },
+    copy_mode_inactive_highlight_bg = { AnsiColor = 'Maroon' },
+    copy_mode_inactive_highlight_fg = { AnsiColor = 'Black' },
 }
 -- key-bindigs
 config.keys = {
@@ -59,16 +68,16 @@ config.keys = {
 -- mouse-bindings
 -- set scrollwheel jumps to 3 lines per tick
 config.mouse_bindings = {
-  {
-    event = { Down = { streak = 1, button = { WheelUp = 1 } } },
-    mods = 'NONE',
-    action = act.ScrollByLine(-3),
-  },
-  {
-    event = { Down = { streak = 1, button = { WheelDown = 1 } } },
-    mods = 'NONE',
-    action = act.ScrollByLine(3),
-  },
+    {
+        event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+        mods = 'NONE',
+        action = act.ScrollByLine(-3),
+    },
+    {
+        event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+        mods = 'NONE',
+        action = act.ScrollByLine(3),
+    },
 }
 
 return config
