@@ -19,3 +19,9 @@ opt.scrolloff = 8
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 keym.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Sync clipboard between OS and Neovim.
+--  See `:help 'clipboard'`
+vim.schedule(function()
+    opt.clipboard = 'unnamedplus'
+end)
