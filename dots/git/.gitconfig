@@ -7,6 +7,8 @@
     ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     rg = log -p -G
     rga = log --branches --all -p -G
+    branch-cleanup = "!git branch --merged HEAD --format='%(if)%(HEAD)%(then)*%(else)%(refname:short)%(end)' | grep -Ev '^(\\*|main|master)$' | xargs -r -n 1 git branch -d"
+    sync = "!git switch $1 && git pull origin $1 && git branch-cleanup"
 [user]
     name = Alex Domingo
     email = alex.domingo.toro@vub.be
