@@ -25,3 +25,5 @@
     helper = cache
 [maintenance]
     repo = ~/src/easybuild-easyconfigs
+[fetch]
+	prune = true
