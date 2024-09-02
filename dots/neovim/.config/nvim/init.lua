@@ -1,5 +1,6 @@
 require("lazy-plugin-manager")
 require("settings")
+require("mappings")
 require("spell")
 require("theming")
 require("git")

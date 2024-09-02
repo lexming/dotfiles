@@ -1,5 +1,5 @@
 local opt = vim.opt
-local keym = vim.keymap
+local sch = vim.schedule
 
 -- Show absolute line number in cursor and relative numbers around it
 opt.number = true
@@ -17,11 +17,8 @@ opt.undofile = true
 -- Keep a buffer of eight lines on scrolling
 opt.scrolloff = 8
 
--- Clear highlights on search when pressing <Esc> in normal mode
-keym.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
 -- Sync clipboard between OS and Neovim.
---  See `:help 'clipboard'`
-vim.schedule(function()
+-- see `:help 'clipboard'`
+sch(function()
     opt.clipboard = 'unnamedplus'
 end)
