@@ -1,5 +1,5 @@
 require("lazy-plugin-manager")
-require("settings")
+require("editor-settings")
 require("mappings")
 require("spell")
 require("theming")
