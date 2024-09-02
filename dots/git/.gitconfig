@@ -4,6 +4,7 @@
     cm = commit -m
     ca = commit --amend
     cf = commit --amend --no-edit
+    rs = restore --staged
     ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     rg = log -p -G
     rga = log --branches --all -p -G
