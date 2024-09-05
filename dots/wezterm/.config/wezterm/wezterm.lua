@@ -53,7 +53,7 @@ config.colors = {
 config.keys = {
     -- panel navigation and resizing
     { key = '-', mods = 'SUPER', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = '=', mods = 'SUPER', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = '-', mods = 'SUPER|CTRL', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
     { key = '/', mods = 'SUPER', action = wezterm.action.CloseCurrentPane{ confirm = false } },
     { key = '[', mods = 'SUPER', action = wezterm.action.ActivatePaneDirection('Prev') },
     { key = ']', mods = 'SUPER', action = wezterm.action.ActivatePaneDirection('Next') },
