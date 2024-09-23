@@ -134,7 +134,8 @@ require('lspconfig').ruff.setup({
                     "PL",   -- pylint
                 },
                 ignore = {
-                    "PLR",  -- pylint - refactor
+                    "PLR",   -- pylint - refactor
+                    "Q000",  -- single quotes
                 },
             },
         }
