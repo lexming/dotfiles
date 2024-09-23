@@ -1,6 +1,7 @@
 [alias]
     s = status --untracked-files=normal
     co = checkout
+    csw = switch -c
     cm = commit -m
     ca = commit --amend
     cf = commit --amend --no-edit
