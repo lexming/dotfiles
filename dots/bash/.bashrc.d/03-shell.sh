@@ -10,11 +10,14 @@ else
     alias lt="ls -ltrh"
 fi
 
-# most recent file in cwd
+# print document and follow its contents
+alias catf="tail -f -n +1"
+# follow most recent file in cwd
 most_recent_item="sort -nr | cut -c23- | head -n 1"
 alias rf="find . -type f -printf '%T@ %p\n' | $most_recent_item"
 alias rf1="find . -maxdepth 1 -type f -printf '%T@ %p\n' | $most_recent_item"
 alias tfr='tail -f $(rf1)'
+alias cfr='catf $(rf1)'
 
 # sorted du on current folder
 alias du1h="du -h --max-depth=1 | sort -h"
