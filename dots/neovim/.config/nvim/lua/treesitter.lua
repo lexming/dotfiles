@@ -21,6 +21,10 @@ require("nvim-treesitter.configs").setup {
     -- Automatically install missing parsers when entering buffer
     auto_install = true,
 
+    indent = {
+        enable = true
+    },
+
     highlight = {
         enable = true,
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
