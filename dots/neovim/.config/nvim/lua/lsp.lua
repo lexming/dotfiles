@@ -110,6 +110,9 @@ require("lspconfig").marksman.setup({})
 --[[ Settings for TOML LSP ]]
 require("lspconfig").taplo.setup({})
 
+--[[ Settings for CSS LSP ]]
+require'lspconfig'.cssls.setup{}
+
 --[[ Settings for Python LSP ]]
 require('lspconfig').ruff.setup({
     init_options = {

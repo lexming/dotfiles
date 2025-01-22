@@ -4,6 +4,7 @@ return {
         opts = {
             ensure_installed = {
                 "bashls",    -- bash
+                "cssls",     -- css
                 "lua_ls",    -- lua
                 "marksman",  -- markdown
                 "ruff",      -- python
