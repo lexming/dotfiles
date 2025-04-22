@@ -1,3 +1,6 @@
+[org.kde.kscreen.desktop][Global Shortcuts]
+ShowOSD=Display
+
 [org.kde.spectacle.desktop][Global Shortcuts]
 ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=
