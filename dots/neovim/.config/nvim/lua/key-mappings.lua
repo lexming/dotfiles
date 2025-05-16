@@ -13,3 +13,8 @@ keym.set("x", "s", require('substitute').visual, { noremap = true })
 keym.set({'n', 'x', 'o'}, '<leader>s',  '<Plug>(leap-forward)')
 keym.set({'n', 'x', 'o'}, '<leader>S',  '<Plug>(leap-backward)')
 keym.set({'n', 'x', 'o'}, '<leader>sg', '<Plug>(leap-from-window)')
+
+-- Mappings for osc52
+keym.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
+keym.set('n', '<leader>cc', '<leader>c_', {remap = true})
+keym.set('v', '<leader>c', require('osc52').copy_visual)
