@@ -5,4 +5,5 @@ fi
 if [ "$VSC_INSTITUTE" == "brussel" ]; then
     alias mysqueue="mysqueue -M hydra,anansi"
     alias mysinfo="mysinfo -M hydra,anansi"
+    alias scancel="scancel -M anansi,hydra"
 fi
