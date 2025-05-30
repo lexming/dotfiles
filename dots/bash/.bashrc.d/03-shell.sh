@@ -22,6 +22,9 @@ alias cfr='catf $(rf1)'
 # sorted du on current folder
 alias du1h="du -h --max-depth=1 | sort -h"
 
+# checksum of remote file
+rsha256sum() { curl -sL "$1" | sha256sum; }
+
 # automatically expand variables on tab completion
 shopt -s direxpand
 # argument to cd that is not a directory is assumed to be a variable
