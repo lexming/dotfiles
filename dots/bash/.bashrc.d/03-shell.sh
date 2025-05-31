@@ -35,7 +35,7 @@ eval "$(dircolors ~/.dir_colors)"
 
 # Fuzzy finder
 if hash fzf 2>/dev/null; then
-    source $HOME/.local/share/fzf/key-bindings.bash
+    source "$HOME/.local/share/fzf/key-bindings.bash"
     if hash fd 2>/dev/null; then
          export FZF_DEFAULT_COMMAND="fd --type f"
     fi
@@ -46,4 +46,9 @@ if hash starship 2>/dev/null; then
     export STARSHIP_LOG="error"
     starship_bin="$(which starship)"
     eval "$($starship_bin init bash)"
+fi
+
+# Enable zoxide
+if hash zoxide 2>/dev/null; then
+    eval "$(zoxide init bash)"
 fi
