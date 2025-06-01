@@ -16,20 +16,48 @@
     email = alex.domingo.toro@vub.be
 [github]
     user = lexming
-[pull]
-    rebase = false
+[credential]
+    helper = cache
 [init]
     defaultBranch = main
+[core]
+    pager = delta
+[fetch]
+	prune = true
+[pull]
+    rebase = false
+[merge]
+    conflictstyle = zdiff3
+[diff]
+    algorithm = histogram
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    dark = true
+    syntax-theme = none
+    minus-style = red dim black
+    minus-emph-style = black bold red
+    plus-style = green black
+    plus-emph-style = black bold green
+    hunk-header-decoration-style = black ul
+    hunk-header-file-style = yellow
+    hunk-header-style = yellow
+    file-decoration-style = orange overline
+    file-style = orange bold
+    line-numbers = true
+    line-numbers-left-style = black
+    line-numbers-right-style = black
+    line-numbers-left-format = "{nm:>2}|"
+    line-numbers-right-format = "{np:>3} "
+    line-numbers-plus-style = green
+    line-numbers-minus-style = dim red
+    whitespace-error-style = black bold
+    blame-format = "{author:<18} {commit:<6} {timestamp:<15}"
+    blame-palette = "#2f1d21" "#252e2a" "#3a3321" "#212b38" "#2b2239"
+    blame-separator-format = "{n:}|"
 [filter "lfs"]
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
-[credential]
-    helper = cache
-[maintenance]
-    repo = ~/src/easybuild-easyconfigs
-[fetch]
-	prune = true
-[diff]
-	algorithm = histogram
