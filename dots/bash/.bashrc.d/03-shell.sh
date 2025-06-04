@@ -25,13 +25,6 @@ alias du1h="du -h --max-depth=1 | sort -h"
 # checksum of remote file
 rsha256sum() { curl -sL "$1" | sha256sum; }
 
-# ripgrep through delta
-if hash delta 2>/dev/null; then
-    unset -f rg
-    rg_bin="$(which rg)"
-    rg() { $rg_bin --json $@ | delta; }
-fi
-
 # automatically expand variables on tab completion
 shopt -s direxpand
 # argument to cd that is not a directory is assumed to be a variable
