@@ -9,5 +9,6 @@ fi
 # Default editors
 export VISUAL="$vi"
 export EDITOR="$vi"
+export SYSTEMD_EDITOR="$vi"
 
 alias vi="$vi"
