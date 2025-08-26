@@ -73,4 +73,5 @@ Additional tools for the terminal:
 * File listing: [eza](https://github.com/eza-community/eza)
 * File search: [fd](https://github.com/sharkdp/fd)
 * Fuzzy finder: [fzf](https://github.com/junegunn/fzf)
+* Shell Navigation: [zoxide](https://github.com/ajeetdsouza/zoxide)
 
