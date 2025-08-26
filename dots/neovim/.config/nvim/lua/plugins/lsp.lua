@@ -1,6 +1,6 @@
 return {
     {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         opts = {
             ensure_installed = {
                 "bashls",    -- bash
@@ -12,6 +12,13 @@ return {
             },
         },
     },
-    { "williamboman/mason-lspconfig.nvim" },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {},
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+    },
     { "neovim/nvim-lspconfig" },
 }
